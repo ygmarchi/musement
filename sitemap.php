@@ -44,7 +44,7 @@ function send ($lang, $recipients) {
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'sitemap [' . $lang . ']';
+    $mail->Subject = 'MUSEMENT.COM sitemap for ' . $lang;
     $mail->Body    = 'Please find the sitemap as <b>attachment</b>.';
     $mail->AltBody = 'Please find the sitemap as attachment.';
 
