@@ -1,0 +1,34 @@
+<head>
+    <style type="text/css">
+        label, select, button, input {
+            margin: 10
+        }
+    </style>
+</head>
+
+<form action="sitemap.php" method="post">
+    <p>
+    <label for="lang">Linguage:</label> <select name="lang">
+        <option value="es-ES">Spanish</option>
+        <option value="fr-FR">French</option>
+        <option value="it-IT">Italian</option>
+    </select>
+    <p id=recipients>
+    <label for="add">Recipients:</label><button name="add" type="button" onclick="addRecipient ()">+</button>
+    <p>
+    <button name="action" type="submit" value="download">Get sitemap</button>
+    <button name="action" type="submit" value="send">Send sitemap</button>
+</form>
+
+<script lang="javascript">
+    function addRecipient () {
+        let recipients = document.querySelectorAll ('.recipient')
+        if (Array.prototype.find.call (recipients, recipient => !recipient.value))
+            return
+        let recipient = document.createElement ('input')
+        recipient.setAttribute ('type', 'email')
+        recipient.setAttribute ('class', 'recipient')
+        recipient.setAttribute ('name', 'recipients[]')
+        document.querySelector ('#recipients').appendChild (recipient)
+    }    
+</script>
