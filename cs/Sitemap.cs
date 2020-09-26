@@ -17,15 +17,19 @@ public class Sitemap {
     string[] recipients;
     string lang;
     bool lastmod;
+    bool emailOnly;
 
     const string baseurl = "https://api.musement.com/api/v3/";
     const float cityPriority = 0.7F;
     const float activityPriority = 0.5F;
 
     async Task send () {
-        MailMessage mail = new MailMessage();
-        SmtpClient SmtpServer = new SmtpClient(smtpServer);
+        SmtpClient smtp = new SmtpClient(smtpServer);
+        smtp.EnableSsl = true;
+        smtp.UseDefaultCredentials = false;
+        smtp.Credentials = new System.Net.NetworkCredential (user, password);
 
+        MailMessage mail = new MailMessage();
         mail.From = new MailAddress(user);
         foreach (string recipient in recipients) {
             mail.To.Add(recipient);
@@ -33,15 +37,12 @@ public class Sitemap {
         mail.Subject = "MUSEMENT.COM sitemap for " + lang;
         mail.Body = "Hello,\n\nplease find MUSEMENT.COM sitemap as attachment.";
 
-        SmtpServer.Port = 587;
-        SmtpServer.Credentials = new System.Net.NetworkCredential(user, password);
-        SmtpServer.EnableSsl = true;
-
-        await create ();
+        if (!emailOnly)
+            await create ();
 
         Attachment attachment = new Attachment(path);
         mail.Attachments.Add(attachment);
-        SmtpServer.Send(mail);
+        smtp.Send(mail);
         Console.WriteLine ("Sitemap sent");
     }
 
@@ -85,7 +86,7 @@ public class Sitemap {
             
             stream.Close ();
         }
-    }   
+    }       
 
     async Task writeLastmod (string url, XmlWriter xml) {
         if (lastmod) {
@@ -185,6 +186,10 @@ public class Sitemap {
                 case "--lastModified":
                     program.lastmod = true;
                     break;
+                case "-e":
+                case "--nogen":
+                    program.emailOnly = true;
+                    break;
                 case "-h":
                 case "--help":
                     throw new ArgumentException ("help");
@@ -208,6 +213,14 @@ public class Sitemap {
         if (program.limit < 0) {
             program.limit = 20;
         }
+
+        if (program.emailOnly) {
+            if (!File.Exists (program.path))
+                throw new ArgumentException (program.path + " does not exists");
+            
+            if (program.recipients.Length == 0)
+                throw new ArgumentException ("email implied but no recipient provided");
+        } 
 
         if (program.recipients.Length > 0) {
             if (program.user == null)
@@ -263,6 +276,9 @@ sitemap <options> <file>
     -d
     --lastModified
         query each page to include lastModified information in the sitemap, defaults to false
+    -e
+    --nogen:
+        don't generate sitemap, just send it if was already generated
     -h 
     --help
         prints this usage

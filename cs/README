@@ -1,32 +1,22 @@
-
-Usage:
-
-sitemap <options> <file>
-
-<file> is optional, defaults to sitemap.xml inside current directory
-<options> are
-    -l:
-    --lang:
-        sitemap language, defaults to it-IT
-    -u:
-    --user:
-        email account (mandatory if recipients specified)
-    -p:
-    --password:
-        email password (mandatory if recipients specified)
-    -s:
-    --server:
-        email smpt server (mandatory if recipients specified)
-    -n:
-    --limit:
-        limit of cities and activities in sitemap, defaults to 20, 0 means no limit, negative means default
-    -r:
-    --recipient:
-        email recipient, if not provided non email will be sent, can be repeated
-    -d
-    --lastModified
-        query each page to include lastModified information in the sitemap, defaults to false
-    -h 
-    --help
-        prints this usage
-
+Querying cities, url https://api.musement.com/api/v3/cities?limit=20
+Querying activities for city Amsterdam, url https://api.musement.com/api/v3/cities/57/activities?limit=20
+Querying activities for city Parigi, url https://api.musement.com/api/v3/cities/40/activities?limit=20
+Querying activities for city Roma, url https://api.musement.com/api/v3/cities/2/activities?limit=20
+Querying activities for city Milano, url https://api.musement.com/api/v3/cities/1/activities?limit=20
+Querying activities for city Barcellona, url https://api.musement.com/api/v3/cities/60/activities?limit=20
+Querying activities for city Nizza, url https://api.musement.com/api/v3/cities/45/activities?limit=20
+Querying activities for city Dubai, url https://api.musement.com/api/v3/cities/168/activities?limit=20
+Querying activities for city New York, url https://api.musement.com/api/v3/cities/55/activities?limit=20
+Querying activities for city Lione, url https://api.musement.com/api/v3/cities/47/activities?limit=20
+Querying activities for city Bordeaux, url https://api.musement.com/api/v3/cities/378/activities?limit=20
+Querying activities for city Venezia, url https://api.musement.com/api/v3/cities/4/activities?limit=20
+Querying activities for city San Francisco, url https://api.musement.com/api/v3/cities/107/activities?limit=20
+Querying activities for city Orlando, url https://api.musement.com/api/v3/cities/111/activities?limit=20
+Querying activities for city Las Vegas, url https://api.musement.com/api/v3/cities/95/activities?limit=20
+Querying activities for city Lisbona, url https://api.musement.com/api/v3/cities/71/activities?limit=20
+Querying activities for city Marrakech, url https://api.musement.com/api/v3/cities/160/activities?limit=20
+Querying activities for city Londra, url https://api.musement.com/api/v3/cities/56/activities?limit=20
+Querying activities for city Madrid, url https://api.musement.com/api/v3/cities/61/activities?limit=20
+Querying activities for city Berlino, url https://api.musement.com/api/v3/cities/52/activities?limit=20
+Querying activities for city Praga, url https://api.musement.com/api/v3/cities/70/activities?limit=20
+Sitemap written to sitemap.xml
