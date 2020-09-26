@@ -1,0 +1,15 @@
+/home/carlo/Programs/musement/musement/cs/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/home/carlo/Programs/musement/musement/cs/obj/Debug/netcoreapp3.1/cs.csprojAssemblyReference.cache
+/home/carlo/Programs/musement/musement/cs/obj/Debug/netcoreapp3.1/cs.AssemblyInfoInputs.cache
+/home/carlo/Programs/musement/musement/cs/obj/Debug/netcoreapp3.1/cs.AssemblyInfo.cs
+/home/carlo/Programs/musement/musement/cs/obj/Debug/netcoreapp3.1/cs.csproj.CoreCompileInputs.cache
+/home/carlo/Programs/musement/musement/cs/obj/Debug/netcoreapp3.1/cs.csproj.CopyComplete
+/home/carlo/Programs/musement/musement/cs/obj/Debug/netcoreapp3.1/cs.genruntimeconfig.cache
+/home/carlo/Programs/musement/musement/cs/bin/Debug/netcoreapp3.1/Sitemap
+/home/carlo/Programs/musement/musement/cs/bin/Debug/netcoreapp3.1/Sitemap.deps.json
+/home/carlo/Programs/musement/musement/cs/bin/Debug/netcoreapp3.1/Sitemap.runtimeconfig.json
+/home/carlo/Programs/musement/musement/cs/bin/Debug/netcoreapp3.1/Sitemap.runtimeconfig.dev.json
+/home/carlo/Programs/musement/musement/cs/bin/Debug/netcoreapp3.1/Sitemap.dll
+/home/carlo/Programs/musement/musement/cs/bin/Debug/netcoreapp3.1/Sitemap.pdb
+/home/carlo/Programs/musement/musement/cs/obj/Debug/netcoreapp3.1/Sitemap.dll
+/home/carlo/Programs/musement/musement/cs/obj/Debug/netcoreapp3.1/Sitemap.pdb

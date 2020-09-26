@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "EQKlb1atPjs5M/bafvr6LEAtl4mT5jqveu9Zt+So8F5e4pO0QhCLHwt2qaB2n6fKqJsx0MZ0FY8IBydkCoC6Uw==",
+  "success": true,
+  "projectFilePath": "/home/carlo/Programs/musement/musement/cs/cs.csproj",
+  "expectedPackageFiles": [
+    "/home/carlo/.nuget/packages/newtonsoft.json/12.0.3-beta2/newtonsoft.json.12.0.3-beta2.nupkg.sha512"
+  ],
+  "logs": []
+}

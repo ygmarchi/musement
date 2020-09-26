@@ -1,0 +1,32 @@
+
+Usage:
+
+sitemap <options> <file>
+
+<file> is optional, defaults to sitemap.xml inside current directory
+<options> are
+    -l:
+    --lang:
+        sitemap language, defaults to it-IT
+    -u:
+    --user:
+        email account (mandatory if recipients specified)
+    -p:
+    --password:
+        email password (mandatory if recipients specified)
+    -s:
+    --server:
+        email smpt server (mandatory if recipients specified)
+    -n:
+    --limit:
+        limit of cities and activities in sitemap, defaults to 20, 0 means no limit, negative means default
+    -r:
+    --recipient:
+        email recipient, if not provided non email will be sent, can be repeated
+    -d
+    --lastModified
+        query each page to include lastModified information in the sitemap, defaults to false
+    -h 
+    --help
+        prints this usage
+
